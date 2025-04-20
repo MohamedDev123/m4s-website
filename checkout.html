@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>إتمام الطلب</title>
+  <style>
+    body {
+      font-family: Arial;
+      direction: rtl;
+      padding: 30px;
+      background-color: #f9f9f9;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px #ccc;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .summary {
+      background: #f1f1f1;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🧾 إتمام الطلب</h2>
+
+  <form onsubmit="submitOrder(event)">
+    <label>👤 الاسم الكامل:</label>
+    <input type="text" id="name" required>
+
+    <label>📱 رقم الهاتف:</label>
+    <input type="tel" id="phone" required>
+
+    <label>🏠 العنوان:</label>
+    <textarea id="address" rows="3" required></textarea>
+
+    <div class="summary" id="order-summary"></div>
+
+    <button type="submit">✅ تأكيد الطلب</button>
+  </form>
+
+  <script>
+    const products = JSON.parse(localStorage.getItem("cart")) || [];
+    const summaryDiv = document.getElementById("order-summary");
+
+    // عرض ملخص الطلب
+    let total = 0;
+    products.forEach(p => {
+      summaryDiv.innerHTML += `<p>📦 ${p.name} × ${p.quantity} = ${p.price * p.quantity} $</p>`;
+      total += p.price * p.quantity;
+    });
+    summaryDiv.innerHTML += `<h3>💰 الإجمالي: ${total} $</h3>`;
+
+    // عند تأكيد الطلب
+    function submitOrder(e) {
+      e.preventDefault(); // عشان مانعملش reload
+
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const address = document.getElementById("address").value;
+
+      if (name && phone && address) {
+        alert(`🎉 شكرًا يا ${name}! تم تأكيد طلبك بنجاح.\nهنوصله على: ${address}`);
+        localStorage.removeItem("cart"); // فضي السلة بعد الطلب
+        window.location.href = "indx.html"; // رجع المستخدم للصفحة الرئيسية
+      }
+    }
+  </script>
+
+</body>
+</html>
