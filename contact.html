@@ -1,0 +1,161 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>m4&s</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="shortcut icon" href="image/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styl.css">
+    
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+    
+</head>
+<body>
+
+<!--  -->
+<header id="header">
+            <a href="#" class="logo"><h1>m4<span>&</span>s</h1></a>
+
+    <nav>
+            <ul id="navbar">
+                <li><a href="indx.html">Home</a></li>
+
+                    <li><a  href="shop.html">shop</li>
+
+                <li><a href="about.html">About</a></li>
+                <li><a class="active"  href="contact.html">contact</a></li>
+                <li id="lg-bag"><a  href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                <a href="" id="close"><i class="fa fa-times"></i></a>
+            </ul>
+    </nav>
+                <div id="mobile">
+                    <a  href="cart.html"><i class="fa fa-shopping-bag" ></i></a>
+                     <i id="bar" class="fa fa-outdent"></i>
+                </div>
+                <br>
+                    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+</header>
+
+<section id="homepage-contact">
+    <div id="about-text">
+    <h2>#KnowUs</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+</div>
+</section>
+
+
+
+<div class="container">
+    <h2>📞 تواصل معنا</h2>
+
+    <div class="row">
+      <!-- خريطة -->
+      <div class="map">
+          <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55287.71298161264!2d30.9859915!3d30.7935654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145979cf8f508b9d%3A0xf83e2aa6b7a3d74f!2z2YXYsdmD2LIg2KfZhNmF2YbYp9iqINmE2YXYtdix2Kkg2KfZhNio2LHZiNmE2KfYqg!5e0!3m2!1sen!2seg!4v1684940910114!5m2!1sen!2seg" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- نموذج -->
+      <div class="form">
+          <form id="contactForm">
+              <input type="text" name="name" placeholder="الاسم الكامل" required>
+              <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+              <textarea name="message" rows="6" placeholder="اكتب رسالتك هنا..." required></textarea>
+              <button type="submit">📨 إرسال</button>
+              <div class="message" id="successMessage">✅ تم إرسال رسالتك بنجاح!</div>
+            </form>
+            
+            <div class="cta-buttons">
+                <a href="tel:+201065214356" class="cta-btn">📞 اتصل الآن</a>
+          <a href="mailto:contact@yourdomain.com" class="cta-btn">✉️ راسلنا</a>
+          <a href="https://wa.me/201065214356" class="cta-btn" style="background-color:#25D366;">💬 واتساب</a>
+        </div>
+    </div>
+</div>
+</div>
+<button class="dark-toggle" onclick="toggleDarkMode()">🌙 تبديل الوضع</button>
+  
+
+
+
+
+
+            <!-- newsletter -->
+            <section id="newsletter" class="section-p1 section-m1">
+                <div class="newstext">
+                <h4>Sign Up For Newsletters</h4>
+                <p>Get E-mail updates about our latest shop and <span>Special offers.</span></p>
+               </div> 
+               <div class="from">
+                <input type="text" placeholder="your email address">
+                <button>Sign Up</button>
+               </div>
+            </section>
+
+
+                                    <footer class="section-p1">
+                                    <div>
+                                        <h1>M4<span>&</span>S</h1>      
+                                      <H4>Contact</H4>
+                                      <p><strong>Address: </strong> 562 wellington Road, street 32,  Qutour. Tanta </p>
+                                      <P><strong>Phone:</strong>20+ 1065214356 /20+ 1025127178 / 20+ 1012471965 </P>
+                                      <p><strong>Working Hours:</strong>10:00 pm- 12:00 am </p>
+                                     <div class="follow">
+                                        <h4>Follow Us</h4>
+                                        <div class="icon">
+                                            <i class="fab fa-facebook-f"></i>
+                                            <i class="fab fa-twitter"></i>
+                                            <i class="fab fa-instagram"></i>
+                                            <i class="fab fa-pinterest-p"></i>
+                                            <i class="fab fa-youtube"></i>
+                                        </div>
+                                     </div>
+                                    </div>
+                                    
+                                    <div class="col">
+                                        <h4>About</h4>
+                                        <a href="">About us</a>
+                                        <a href="">Delivery Information</a>
+                                        <a href="">Privacy Policy</a>
+                                        <a href="">Terms & Conditions</a>
+                                        <a href="">Contact Us</a>
+
+                                    </div>
+
+                                    <div class="col">
+                                        <h4>My Account</h4>
+                                        <a href="">Sign In</a>
+                                        <a href="">View Cart</a>
+                                        <a href="">My Wishlist</a>
+                                        <a href="">Track My Order</a>
+                                        <a href="">Help</a>
+
+                                    </div>
+                                    <div class="col install">
+                                    <h4>Install App</h4>
+                                    <p>From App Store or Google Play</p>
+                                    <div class="row">
+                                    <img src="./img/pay/app.jpg">
+                                    <img src="./img/pay/play.jpg">
+                                    </div>
+                                    <P>Secured Payment Gateways </P>
+                                    <img src="./img/pay/pay.png">
+                                </div>
+                            </footer>
+
+                                
+
+
+
+                            <script src="script.js"></script>
+                        </body>
+                        </html>
+
